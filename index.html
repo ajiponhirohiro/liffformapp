@@ -27,7 +27,7 @@
             <input type="number" name="Amount" required>
         </div>
         <div>
-            <input type="radio" id="inq1" name="Round_Trip" value="False" required><label for="inq1">片道</label>
+            <input type="radio" id="inq1" name="Round_Trip" value="False" required selected><label for="inq1">片道</label>
             <input type="radio" id="inq2" name="Round_Trip" value="True"><label for="inq2">往復</label>
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
@@ -40,18 +40,6 @@
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
         
-//        ここから
-        const Title = "交通費登録";
-                const Date    = $('input[name="Date"]').val();
-                const Departure    = $('input[name="Departure"]').val();
-                const Arrival = $('input[name="Arrival"]').val();
-                const Amount  = $('input[name="Amount"]').val();
-                const Round_Trip  = $('input[name="Round_Trip"]').val();
-                
-                const msg = `${Title}\n${Date}\n${Departure}\n${Arrival}\n${Amount}\n${Round_Trip}`;
-                window.alert(msg);
-        
-//         ここまで
         $(document).ready(function () {
             const liffId = "1660924398-z5AvEvwG";
             initializeLiff(liffId);
@@ -91,6 +79,7 @@
                 const Round_Trip  = $('input[name="Round_Trip"]').val();
                 
                 const msg = `${Title}\n${Date}\n${Departure}\n${Arrival}\n${Amount}\n${Round_Trip}`;
+                window.alert(msg);
                 sendText(msg);
 
                 return false;
