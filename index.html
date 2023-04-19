@@ -77,9 +77,9 @@
                 const Arrival = $('input[name="Arrival"]').val();
                 const Amount  = $('input[name="Amount"]').val();
                 const Round_Trip  = false;
-                if ($('input[name="Round_Trip"]').checked){
-                    Round_Trip = true;
-                }
+//                 if ($('input[name="Round_Trip"]').checked){
+//                     Round_Trip = true;
+//                 }
                 
                 const msg = `${Title}\n${Date}\n${Departure}\n${Arrival}\n${Amount}\n${Round_Trip}`;
                 sendText(msg);
