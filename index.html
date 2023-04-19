@@ -76,7 +76,7 @@
                 const Departure    = $('input[name="Departure"]').val();
                 const Arrival = $('input[name="Arrival"]').val();
                 const Amount  = $('input[name="Amount"]').val();
-                const Round_Trip  = $('input[name="Round_Trip"]').val();
+                const Round_Trip  = Round_Trip.value;
                 
                 const msg = `${Title}\n${Date}\n${Departure}\n${Arrival}\n${Amount}\n${Round_Trip}`;
                 sendText(msg);
