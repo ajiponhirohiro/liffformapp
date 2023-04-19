@@ -12,19 +12,19 @@
     <form class="w-75 mx-auto">
         <p class="mt-3">出発駅</p>
         <div>
-            <input class="form-control w-100 mt-1" name="name" placeholder="" required>
+            <input class="form-control w-100 mt-1" name="Departure" placeholder="" required>
         </div>
         <p class="mt-3">到着駅</p>
         <div>
-            <input class="form-control w-100 mt-1" name="udetate" required>
+            <input class="form-control w-100 mt-1" name="Arrival" required>
         </div>
         <p class="mt-3">金額(片道)</p>
         <div>
-            <input class="form-control w-100 mt-1" name="fukkin" required>
+            <input class="form-control w-100 mt-1" name="Amount" required>
         </div>
         <p class="mt-3">往復の場合はチェック</p>
         <div>
-            <input type="checkbox" name="Round=Trip" value="Y">
+            <input type="checkbox" name="Round_Trip" value="Y">
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -67,11 +67,10 @@
 
         $(function () {
             $('form').submit(function () {
-                const name    = $('input[name="name"]').val();
-                const udetate = $('input[name="udetate"]').val();
-                const fukkin  = $('input[name="fukkin"]').val();
-                const haikin  = $('input[name="haikin"]').val();
-                const sukuwat = $('input[name="sukuwat"]').val();
+                const Departure    = $('input[name="name"]').val();
+                const Arrival = $('input[name="udetate"]').val();
+                const Amount  = $('input[name="fukkin"]').val();
+                const Round_Trip  = $('input[name="haikin"]').val();
                 
                 const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
