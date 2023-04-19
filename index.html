@@ -24,7 +24,7 @@
         </div>
         <p class="mt-3">金額(片道)</p>
         <div>
-            <input class="form-control w-100 mt-1" name="Amount" required>
+            <input type="number" name="Amount" required>
         </div>
         <p class="mt-3">往復の場合はチェック</p>
         <div>
@@ -71,12 +71,13 @@
 
         $(function () {
             $('form').submit(function () {
-                const Departure    = $('input[name="name"]').val();
-                const Arrival = $('input[name="udetate"]').val();
-                const Amount  = $('input[name="fukkin"]').val();
-                const Round_Trip  = $('input[name="haikin"]').val();
+                const Date    = $('input[name="Date"]').val();
+                const Departure    = $('input[name="Departure"]').val();
+                const Arrival = $('input[name="Arrival"]').val();
+                const Amount  = $('input[name="Amount"]').val();
+                const Round_Trip  = $('input[name="Round_Trip"]').val();
                 
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const msg = `${Date}\n${Departure}\n${Arrival}\n${Amount}\n${Round_Trip}\n${sukuwat}`;
                 sendText(msg);
 
                 return false;
