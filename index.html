@@ -71,13 +71,14 @@
 
         $(function () {
             $('form').submit(function () {
+                const Title = "交通費登録";
                 const Date    = $('input[name="Date"]').val();
                 const Departure    = $('input[name="Departure"]').val();
                 const Arrival = $('input[name="Arrival"]').val();
                 const Amount  = $('input[name="Amount"]').val();
                 const Round_Trip  = $('input[name="Round_Trip"]').val();
                 
-                const msg = `${Date}\n${Departure}\n${Arrival}\n${Amount}\n${Round_Trip}`;
+                const msg = `${Title}\n${Date}\n${Departure}\n${Arrival}\n${Amount}\n${Round_Trip}`;
                 sendText(msg);
 
                 return false;
